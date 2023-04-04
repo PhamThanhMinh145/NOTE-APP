@@ -1,0 +1,30 @@
+- await server.start() : 
+. thường đc bọc trong function khi dùng asycs/await 
+. để ko cần bọc trong function đổi tên file "name.mjs"
+
+- graphQL
+ . schema: 
+    .. giống như 1 document để mô tả trong các kiểu dữ liệu của graphQL bao gồm field và data type là  gì .
+ . resolvers:
+    .. xử lý và trả data về cho client dựa vào những Query trong typeDefs nó gửi tới
+    .. trong resolvers có 4 parameter: 
+        parent: get từng object data khi query trả về data 
+        args: data từ client gửi lên server (PORT API)
+        context: 
+        info : 
+ . graphQL có 3 kiểu dữ liệu chính : 
+     Query: mục đích truy vấn data từ client 
+     Mutation: mục đích update/delete/add data
+     Subscription: hoạt động bên client và mục đích update theo dang real-time and use websocket    
+
+
+// addFolder(name: String!, authorId: ID! ) : Folder 
+ - thêm hàm addFolder với các đối số name, author and return về Folder mới
+ - Dấu "!" biểu đạt là field đó ko đc để trống 
+
+
+
+
+ NOTE: 
+ -sử dụng hook useNavigate() khi ở bên trong useEffect() 
+ - trong case ko sử dụng useEffect() thì nên use component Navigate 
